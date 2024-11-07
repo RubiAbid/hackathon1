@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Wrapper starts here to center everything -->
+    <div class="wrapper">
+        <!-- Resume Form Section -->
+        <div class="a4-size" id="resume-form">
+            <h1 class="heading">Dynamic Resume Generator</h1>
+            <h3>Personal Information</h3>
+            <form id="resumeForm">
+                <div>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter name here" required>
+                </div>
+                <div class="contact">
+                    <label for="contact-number">Contact Number:</label>
+                    <input type="text" id="contact-number" name="contact-number" placeholder="Enter number here" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+                </div>
+                <div class="linkedin">
+                    <label for="linkedin">LinkedIn Profile Link:</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn URL here" required>
+                </div>
+                <h3>Professional Information</h3>
+                <div>
+                    <label for="objective">Objective:</label>
+                    <textarea id="objective" rows="5" placeholder="Enter your objective here"></textarea>
+                </div>
+
+                <div id="work-experience-container">
+                    <label for="work-experience">Work Experience:</label>
+                    <textarea id="work-experience" rows="5" placeholder="Enter your work experience here"></textarea>
+                    <!-- New work experience text areas will be added here -->
+                </div>
+
+                <div class="button">
+                    <button type="button" onclick="addNewWEField()">Add Work Experience</button>
+                </div>
+
+                <h3>Academic Qualifications</h3>
+                <div id="academic-qualifications-container">
+                    <label for="academic-qualification"></label>
+                    <textarea id="academic-qualification" rows="5" placeholder="Enter your academic qualification here"></textarea>
+                    <!-- New academic qualification text areas will be added here -->
+                </div>
+                
+                <div class="button">
+                    <button type="button" onclick="addNewAcademicField()">Add Academic Qualification</button>
+                </div>
+
+                <h3>Skills</h3>
+                <div id="skills-container">
+                    <div class="form">
+                        <label for="skill"></label>
+                        <input type="text" id="skill" name="skill" placeholder="Enter a skill here" required>
+                    </div>
+                    <!-- New skills input fields will be added here -->
+                </div>
+
+                <div class="button">
+                    <button type="button" onclick="addNewSkillField()">Add Skill</button>
+                </div>
+
+                <div class="GenButton">
+                    <button type="button" onclick="generateCV()">Generate Resume</button>
+                </div>
+
+<!-- Reset Info Button -->
+<div class="reset-button-container">
+    <button type="button" onclick="resetForm()">Reset Info</button>
+</div>
+
+            </form>
+        </div>
+
+        <!-- Resume Template Section -->
+        <div class="resume-template" id="resume-template" style="display: none;">
+            <div class="container">
+                <div class="left-column">
+                    <p id="nameT1">Rubi Abid</p>
+                    <p id="contactT">03765364659</p>
+                    <p id="emailT">xyz@gmail.com</p>
+                    <p id="linkedinT">www.linkedin.com</p>
+                    <hr>
+
+                    <div class="card">
+                        <div class="card-Header">
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="skillsT">
+                                <li>skill1</li>    
+                                <li>skill2</li>              
+                                <li>skill3</li>              
+                                <li>skill4</li>              
+                                <li>skill5</li>              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <h1 id="nameT2">Rubi Abid</h1>
+
+                    <div class="card">
+                        <div class="card-Header">
+                            <h3>Objective</h3>
+                        </div>
+                        <div class="card-body">
+                            <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis cupiditate non perspiciatis facere adipisci, veritatis in praesentium delectus iure amet quos, sequi ipsam deserunt? Excepturi, eaque cupiditate libero ut quae sapiente adipisci qui reiciendis ratione corrupti officiis impedit nostrum necessitatibus rerum iusto eligendi, iure, repudiandae amet odit sunt laudantium!</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-Header">
+                            <h3>Work Experience</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dicta</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dicta</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dicta</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-Header">
+                            <h3>Academic Qualification</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="aqT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dicta</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dicta</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dicta</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button onclick="printCV()" class="print-button">Print Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
