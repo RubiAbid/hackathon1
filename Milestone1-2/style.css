@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.resume-container {
+    width: 210mm; /* Set width to A4 paper size */
+    max-width: 100%; /* Ensure it doesn’t exceed screen size on smaller devices */
+    background-color: #ffffff; /* White background for main content */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    margin-top: 20px; /* Adds space at the top */
+}
+
+/* Full-width header inside A4 container */
+.header {
+    background-color: rgb(236, 117, 74);
+    padding: 1px;
+    display: flex;
+    justify-content: space-between; /* Spaces the text and image */
+    align-items: center;
+    color: white;
+    width: 100%; /* Ensures header is full width of the container */
+    box-sizing: border-box; /* Includes padding within width */
+
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+
+}
+.header h1 {
+    margin: 0;
+}
+
+.header h4 {
+    margin: 0;
+    font-size: 1rem; /* Adjust font size if necessary */
+}
+
+.header p {
+    margin: 0;
+    font-size: 0.9rem; /* Adjust font size if necessary */
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px; /* Larger font for name */
+    font-weight: bold;
+}
+
+h4 {
+    margin: 2px 0; /* Reduced margin to bring closer to h1 */
+    font-size: 16px; /* Keep this size or adjust as needed */
+}
+
+p {
+    margin: 9px 0;
+    font-size: 14px;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    margin-right:50px; /* Moves the image to the left */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+section, aside {
+    flex: 1;
+    padding: 15px 20px;
+}
+.content {
+    display: flex;
+    flex-direction: row; /* Places section and aside side by side */
+    gap: 40px; /* Space between section and aside */
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+h5 {
+    margin: 0; /* Remove default margins */
+    border-bottom: 1px solid #000; /* Solid black line */
+    padding-bottom: 5px; /* Space between the text and the line */
+    margin-top: 20px;
+
+}
+h5:last-of-type {
+    margin-top: 10px; /* Adjust spacing before the next content */}
+
+h6{
+    margin: 0;
+    color:  rgb(236, 117, 74);
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h7 {
+
+    margin: 0; /* Remove default margins */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    display: inline; /* This helps keep it in line with the h6 if needed */
+}
+
+.skills {
+    display: flex; /* Use flexbox to align items horizontally */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    gap: 5px; /* Space between the items */
+
+}
+
+.itemss{
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #d3d3d3; /* Set border width, style, and color */
+    padding: 1px; /* Add some padding */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center the text */
+    justify-content: center;
+    height: 40px; /* Set a fixed height for uniformity */
+    text-align: center;
+    margin-bottom: 1px;
+    width: calc(50% - 10px); /* Sets each item to take half the container width minus gap */
+    background-color:rgb(236, 117, 74); /* Set background color */
+    color: #ffffff;
+
+}
+/* Adjust widths so the first row contains only TYPESCRIPT, HTML/CSS */
+.skills .itemss:nth-child(1),
+.skills .itemss:nth-child(2) {
+    flex: 1 1 30%; /* Ensures these items fit on the same line */
+}
+
+.skills .itemss:nth-child(3),
+.skills .itemss:nth-child(4) {
+    flex: 1 1 45%; /* Pushes the remaining items to the next line */
+}
+b{
+    color: orangered;
+    font-size: xx-large;
+    margin-top: 0;
+}
+#skillsParagraph {
+    display: none; /* Initially hide the paragraph */
+}
+#declare {
+    width: 200px; /* Set button width */
+    height: 50px; /* Set button height */
+    font-size: 16px; /* Set font size */
+    background-color: orangered; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+
+/* Improve visibility of buttons */
+button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px; /* Add padding for a better button size */
+    border-radius: 5px;
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(236, 117, 74); /* Change color on hover */
+}
+ul {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px; /* Indent the list */
+}
+
+li {
+    margin-bottom: 20px; /* Add space between list items */
+}
+.bold{
+   font-weight: bold;
+}
+@media (max-width: 768px) {
+    .itemss {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
