@@ -1,0 +1,381 @@
+/* Centering the A4-sized container horizontally */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+text-align: center;    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;    /* Stack both the resume builder and template vertically */
+    align-items: center;       /* Center both sections horizontally */
+    justify-content: center;   /* Center vertically */
+    min-height: 100vh;         /* Ensure the wrapper takes up at least the full viewport height */
+    padding: 20px;             /* Optional: add padding around the wrapper */
+    text-align: center;        /* Center the text inside (for headings, etc.) */
+}
+
+
+.a4-size {
+    margin: 0 auto;
+    background-color: rgb(199, 165, 165);
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto; /* Auto height for flexibility */
+    padding: 20px;
+        width: 100%; /* Ensure it fits the viewport */
+        max-width: 210mm; /* A4 size width for printing */
+        min-width: 600px; /* Prevent shrinking too much on smaller screens */
+
+
+}
+
+/* Heading styling */
+.heading {
+    text-align: center;
+    margin: 2px;
+    color: #333; /* Dark text color for better readability */
+
+}
+h1, h3 {
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+    color: #333; /* You can set a color that complements your design */
+}
+
+
+.form {
+    margin-bottom: 10px; /* Adds some spacing between fields */
+}
+
+.contact,
+.email,
+.linkedin {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+form > div {
+    display: flex;
+    flex-direction: column; /* Stacks label and input vertically */
+    margin-top: 20px; /* Space between fields */
+}
+
+input {
+    flex: 1; /* This allows input fields to grow and take equal space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Common button styles for all buttons */
+button {
+    width: 30%; /* Set button width to 30% */
+    padding: 10px 0; /* Adds padding to the button for better aesthetics */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Optional: adds rounded corners */
+    background-color: #669acf ;/* Blue background color */
+    color: white; /* White text color */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for all buttons */
+button:hover {
+    background-color: blueviolet; /* Change to violet on hover */
+}
+
+/* Centering the button container */
+.GenButton,
+.button {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Optional: Add some spacing above the button */
+}
+
+.GenButton, .button {
+    display: flex;
+    justify-content: center;
+}
+
+.GenButton button, .button button {
+    margin: 0 auto;
+}
+
+
+textarea {
+    padding: 10px;
+    border-radius: 4px;
+    resize: vertical; /* Allows vertical resizing only */
+    min-height: 80px; /* Sets a minimum height for the textarea */
+    width: 100%; /* Makes the textarea take the full width of its container */
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+    margin-top: 10px; /* Adds space above each textarea */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    border: 1px solid #ccc;
+}
+
+
+
+/* Resume Builder Styling */
+.resume-builder {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Resume Template Section Styling */
+.resume-template {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto; /* Center the template horizontally */
+    min-width: 600px; /* Ensure the template doesn't get too narrow */
+    background-color: #fff;
+    box-sizing: border-box;
+    /* making the resume editable*/
+    outline: none;
+}
+.container {
+    display: flex;
+    margin-top: 50px;
+    width: 120%;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.left-column {
+    flex: 0 0 50%; /* 50% width for the left column */
+    padding: 20px; /* Add some padding */
+    background-color: #669acf; /* Background color for visibility */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.right-column {
+    flex: 0 0 50%; /* 50% width for the right column */
+    background-color:rgb(199, 165, 165);/* Background color for visibility */
+    box-sizing: border-box; /* Include padding in width calculation */
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    
+    .card {
+        border: 1px solid #ccc; /* Light border for the card */
+        border-radius: 8px; /* Rounded corners for the card */
+        padding: 15px;
+        background-color: #fff; /* White background for card */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+        margin-top: 4px;
+    }
+   
+    .card-body p {
+        font-size: 14px;
+        line-height: 1.5; /* Improve readability */
+
+        color: #333;
+        text-align: left; /* Justify text for a neat layout */
+    }
+    .card-Header{
+        background-color: #669acf;
+    }
+   
+    .print-button {
+      
+        margin-top: 20px; /* Add some space above the button */
+        padding: 12px 24px; /* Button padding */
+        font-size: 16px;
+        background-color:#669acf; /* Green background */
+        color: white; /* White text */
+        border: 2px solid #669acf; /* Green border that matches the background */
+
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        text-align: center;
+        box-sizing: border-box; /* Ensures padding and border are included in the button's dimensions */
+        width: auto; /* Button width adjusts based on the text length */
+    
+    }
+    .print-button:hover {
+        background-color: blueviolet; /* Darker green on hover */
+        border: 2px solid blueviolet; /* Green border that matches the background */
+
+    }
+
+
+/* Make sure the resume builder and template are stacked vertically */
+.resume-builder {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+/* Smooth scroll for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+.left-column,
+.right-column {
+    padding: 20px;
+}
+
+
+/* Styling for the Reset Info button container */
+.reset-button-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    align-items: center;     /* Vertically centers the button */
+    margin-top: 20px;
+}
+
+/* Style for the Reset button */
+.reset-button-container button {
+    background-color: rgb(89, 61, 71); /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect for the Reset button */
+.reset-button-container button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Ensure both sections are initially well-styled */
+#resume-builder {
+    display: block; /* Visible by default */
+}
+
+#resume-template {
+    display: none; /* Hidden initially */
+    width: 100%;
+    max-width: 210mm; /* Ensure A4 width in print */
+    box-sizing: border-box;
+}
+
+
+
+/* Ensure consistent width for skill input fields */
+#skills-container input[type="text"] {
+    width: 100%; /* This makes each skill input take the full width of the container */
+    max-width: 100%; /* To prevent expanding beyond the container width */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Optionally, set a fixed width */
+#skills-container input[type="text"] {
+    width: 100%; /* Adjust width as needed */
+}
+
+
+/* Popup container */
+.popup {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+
+@media (max-width: 900px) {
+    #resume-template {
+        width: 95%;  /* Full width for phones */
+        padding: 10px;
+    }
+
+    .content-section {
+        width: 100%;  /* Full width for each section on mobile */
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem;  /* Smaller font size for headings */
+    }
+
+    p {
+        font-size: 1rem;  /* Smaller text for paragraphs */
+    }
+}
+
+
+/* Responsive Layout for Larger Screens (Tablet, Laptop, Desktop) */
+@media (min-width: 768px) {
+    .content-section {
+        width: 48%;  /* Two columns for larger screens */
+        margin-bottom: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;  /* Larger font size for headings */
+    }
+
+    p {
+        font-size: 1.2rem;  /* Larger font size for body text */
+    }
+}
+
+
+
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact; /* For Chrome, Edge, Safari */
+        print-color-adjust: exact; /* Standard property */
+    }
+
+    body {
+        color: #000; /* Fallback for text colors */
+    }
+
+    .resume-template {
+        background-color: white; /* Ensure the background is visible */
+        color: black; /* Text color */
+    }
+
+    button {
+        display: none; /* Hide buttons when printing */
+    }
+}
+
+
+@media print {
+    .resume-template {
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 210mm; /* A4 width */
+        box-sizing: border-box;
+      display: flex;
+      justify-items: center;
+
+
+    }
+}
+
+@media print {
+    .container {
+        overflow-x: visible; /* Show all content */
+    }
+}
